@@ -16,11 +16,12 @@ const Cart = () => {
           <h2>Your Shopping Cart</h2>
           <ul>
             {
-              cartItems.map(item => {
+              cartItems.map(item => (
                 <CartItem
+                  key={item.id}
                   item={item}
                 />
-              })
+              ))
             }
           </ul>
         </Card>
